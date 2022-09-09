@@ -1,0 +1,73 @@
+<!--
+ Use this page for debugging purposes.
+
+ Editor Tools are loaded as git-submodules.
+ You can pull modules by running `yarn pull_tools` and start experimenting.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>unotes</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+  <link href="./styles/app.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body>
+<div>
+  <div>
+    <div class="title-bar" id="toolbar">
+        <span class="document-name" id="noteName"></span>
+      <span class="separator"></span>
+      <div class="menu-section">
+        <button id="createNewNote">
+          <span class="material-icons md-light">add_circle_outline</span>
+        </button>
+        <button id="showNoteList">
+            <span class="material-icons md-light">
+              format_list_bulleted
+            </span>
+        </button>
+      </div>
+    </div>
+
+    <main>
+      <div id='editorjs'></div>
+    </main>
+  </div>
+</div>
+
+<!-- Load Tools -->
+<!--
+ You can upload Tools to your project's directory and use as in example below.
+
+ Also you can load each Tool from CDN or use NPM/Yarn packages.
+
+ Read more in Tool's README file. For example:
+ https://github.com/editor-js/header#installation
+ -->
+<script src="../example/tools/header/dist/bundle.js"></script><!-- Header -->
+<script src="../example/tools/simple-image/dist/bundle.js"></script><!-- Image -->
+<script src="../example/tools/delimiter/dist/bundle.js"></script><!-- Delimiter -->
+<!--  <script src="./tools/list/dist/bundle.js"></script> List -->
+<script src="../example/tools/nested-list/dist/nested-list.js"></script><!-- Nested List -->
+<script src="../example/tools/checklist/dist/bundle.js"></script><!-- Checklist -->
+<script src="../example/tools/quote/dist/bundle.js"></script><!-- Quote -->
+<script src="../example/tools/code/dist/bundle.js"></script><!-- Code -->
+<script src="../example/tools/embed/dist/bundle.js"></script><!-- Embed -->
+<script src="../example/tools/table/dist/bundle.js"></script><!-- Table -->
+<script src="../example/tools/link/dist/bundle.js"></script><!-- Link -->
+<script src="../example/tools/raw/dist/bundle.js"></script><!-- Raw -->
+<script src="../example/tools/warning/dist/bundle.js"></script><!-- Warning -->
+
+<script src="../example/tools/marker/dist/bundle.js"></script><!-- Marker -->
+<script src="../example/tools/inline-code/dist/bundle.js"></script><!-- Inline Code -->
+
+<!-- Load Editor.js's Core -->
+<script src="../dist/editor.js"></script>
+
+<!-- App -->
+<script src="./renderer.js"></script>
+</body>
+</html>

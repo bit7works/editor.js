@@ -16,4 +16,6 @@ test/cypress/videos
 dist/
 
 coverage/
-.nyc_output/
+.nyc_output
+
+/unotes/node_modules/

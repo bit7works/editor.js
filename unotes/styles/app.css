@@ -1,0 +1,229 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+html {
+    overflow-y: hidden;
+}
+
+body {
+    margin: 40px 0 0;
+    color: rgb(220, 220, 220);
+    flex-direction: column;
+    background-color: rgb(28, 28, 28);
+    height: 100vh;
+    font-size: 13px;
+    overflow-y: scroll;
+    font-family: BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5em;
+}
+
+a:link {
+    color: royalblue;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+/*
+ Title bar
+*/
+.title-bar {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+
+    /* Set the navbar to fixed position */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0 3px 0 #0d0f16, 0 0 0 0 rgb(33 48 73 / 29%);
+    border-bottom-color: rgb(35, 35, 35);
+    -webkit-user-select: none;
+
+    /* unselectable */
+    -webkit-app-region: drag;
+}
+
+.title-bar .document-name,
+.title-bar .menu-section {
+    margin-right: 10px;
+}
+
+.document-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.separator {
+    border-left: 1px solid #525252;
+    height: 25px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.menu-section button {
+    background-color: rgb(30, 30, 30);
+    border: none;
+    outline: none;
+    -webkit-app-region: no-drag;
+}
+
+.menu-section button > span:hover {
+    background-color: #7f7f7f;
+    color: rgb(30, 30, 30);
+}
+
+.menu-section button#createNewNote > span {
+    padding: 4px;
+    border-radius: 5px;
+    margin-right: 2px;
+}
+
+.menu-section button#showNoteList > span {
+    padding: 4px;
+    border-radius: 5px;
+}
+
+
+/* Others. */
+.material-icons.md-light {
+    color: rgb(127, 127, 127);
+    font-size: 22px;
+
+    /* font-weight: bold; */
+    text-align: center;
+}
+
+/*
+ Workspace
+*/
+main {
+    padding: 10px;
+
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+/* Editor.js Themes */
+
+@media (max-width: 650px) {
+    .ce-toolbar {
+        background-color: rgb(28, 28, 28);
+        border: 1px solid rgb(35, 35, 35);
+        -webkit-box-shadow: 0 13px 7px -5px rgba(26, 38, 49, 0.09), 6px 15px 34px -6px rgba(4, 17, 39, 0.29);
+        box-shadow: 1px 2px 3px 0 #0d0f16, 0 0 0 0 rgb(33 48 73 / 29%);
+        border-bottom-color: rgb(32, 33, 32);
+    }
+}
+
+@media (min-width: 650px) {
+    .ce-toolbar__settings-btn {
+        color: #f1c5a5;
+        background: #707684;
+        border-radius: 2px;
+    }
+}
+
+::selection {
+    background-color: rgb(252, 163, 17);
+    color: rgb(28, 28, 28);
+}
+
+.ce-header {
+    font-size: 1.3em;
+}
+
+.ce-block--selected .ce-block__content {
+    background: rgb(252, 163, 17);
+}
+
+.ce-block--selected .ce-block__content [contenteditable] {
+    color: rgb(28, 28, 28);
+}
+
+.ce-conversion-tool__icon {
+    color: rgb(28, 28, 28);
+}
+
+.ce-conversion-tool {
+    color: rgb(28, 28, 28);
+}
+
+.ce-inline-toolbar__dropdown-content {
+    color: brown;
+}
+
+.inline-code {
+    background: rgba(250, 239, 240, 0.95);
+    color: red;
+}
+
+.cdx-notify {
+    color: rgb(28, 28, 28);
+}
+
+.tc-popover__item-label {
+    color: rgb(28, 28, 28);
+}
+
+.cdx-checklist__item-checkbox {
+    width: 15px;
+    height: 15px;
+    margin: 6px;
+}
+
+.cdx-checklist__item-checkbox::after {
+    top: 4px;
+    left: 3px;
+    width: 7px;
+    height: 4px;
+}
+
+.cdx-list {
+    margin: 0;
+    padding-left: 27px;
+}
+
+.cdx-list__item {
+    padding: 2px 0 2px 3px;
+    line-height: 1.5em;
+}
+
+.cdx-checklist__item-text {
+    padding: 5px 0;
+}
+
+.cdx-simple-image__picture--with-background {
+    background: rgb(28, 28, 28);
+}
+
+.cdx-simple-image__picture--with-border {
+    border: 1px solid #44475a6b;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+.cdx-input {
+    border: 1px solid #44475a6b;
+    padding: 6px 12px;
+}
+
+.tc-wrap {
+    --color-background: #6272a4;
+    --color-text-secondary: #7b7e89;
+    --color-border: #8be9fd;
+}
