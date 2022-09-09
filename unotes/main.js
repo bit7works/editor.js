@@ -162,6 +162,8 @@ ipcMain.on('save-default-document', (event, note) => {
       handleError();
     }
     console.log('[o] Save content to ', currentDocumentPath);
+
+    mainWindow.webContents.send('local-document-updated', note);
   });
 });
 
@@ -228,6 +230,9 @@ const openFile = (filePath) => {
       app.addRecentDocument(filePath);
       openedFilePath = filePath;
 
+      if (!filePath) {
+        return;
+      }
       // set current documrnt path.
       notes.setCurrentDocumentPath(filePath);
       mainWindow.webContents.send('local-document-opened', {

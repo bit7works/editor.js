@@ -16,7 +16,7 @@ body {
     font-size: 13px;
     overflow-y: scroll;
     font-family: BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  line-height: 1.5em;
+    line-height: 1.5em;
 }
 
 a:link {
@@ -51,12 +51,16 @@ a:active {
     /* Set the navbar to fixed position */
     top: 0;
     z-index: 1000;
+    -webkit-user-select: none;
     box-shadow: 0 0 3px 0 #0d0f16, 0 0 0 0 rgb(33 48 73 / 29%);
     border-bottom-color: rgb(35, 35, 35);
-    -webkit-user-select: none;
-
     /* unselectable */
     -webkit-app-region: drag;
+}
+
+.title-bar:hover {
+  /*box-shadow: 0 0 3px 0 #0d0f16, 0 0 0 0 rgb(33 48 73 / 29%);*/
+  /*border-bottom-color: rgb(35, 35, 35);*/
 }
 
 .title-bar .document-name,
@@ -99,6 +103,19 @@ a:active {
     border-radius: 5px;
 }
 
+.meta-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.dateline {
+    color: #818181;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 /* Others. */
 .material-icons.md-light {
@@ -113,9 +130,7 @@ a:active {
  Workspace
 */
 main {
-    padding: 10px;
-
-    /* font-family: Arial, Helvetica, sans-serif; */
+    padding: 5px 10px 10px;
 }
 
 /* Editor.js Themes */
